@@ -3,9 +3,7 @@
 PokéSeek is a new Pokédex website that allows beginners and seasoned veterans to find more information on their favorite Pokémon that is not often provided in other Pokédex. For beginners, it allows them to explore any Pokémon that appears on our homepace or through the search bar. Once they click on this Pokémon, it will display their type, image, and some simple information such as location. For more experienced players, information such as berries needed, a Pokémon's environment, and the different natures will be included. This project will show these features using the first generation's 150 Pokémon.
 
 ## Wireframes:
-Desktop/iPad/iPhone:
-
-<img src="https://user-images.githubusercontent.com/56780129/143791339-ba470747-62d8-48ab-a8f2-6134ae0d33ab.png" width="500px"> <img src="https://user-images.githubusercontent.com/56780129/143791345-c188c9d7-f83f-4175-bcc3-e0cec4df9f2d.png" width="500px"> <img src="https://user-images.githubusercontent.com/56780129/143791360-d1cd8fc4-44f7-43b7-9a4b-f2431660211d.png" width="200px">
+<a href="https://www.figma.com/file/zhlHmybwwZ6oVnql3n1rS5/Pokedex-Layout?node-id=0%3A1">Wireframe Content</a>
 
 
 ## API Being Used: [PokéAPI](https://pokeapi.co)
