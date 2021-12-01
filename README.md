@@ -14,10 +14,10 @@ PokéSeek is a Pokédex website that allows beginners and seasoned veterans to f
 ## Wireframes:
 [Wireframe Created Using Figma](https://www.figma.com/file/zhlHmybwwZ6oVnql3n1rS5/Pokedex-Layout?node-id=0%3A1)
 
-Desktop (Homepage)         |        Tablet (Homepage) | Mobile (Homepage)  |
+Desktop (Listing)         |        Tablet (Listing) | Mobile (Listing)  |
 :-------------------------:|:-------------------------:|:------------------:
  <img src="https://user-images.githubusercontent.com/56780129/144083549-4f45b3d0-630c-4bac-a291-ad76b8de34eb.png" width="400">| <img src="https://user-images.githubusercontent.com/56780129/144083801-8c64197e-382e-490f-9f99-6d438906be82.png" width="200">  | <img src="https://user-images.githubusercontent.com/56780129/144083869-58d8e75c-d01a-4a17-9a1f-8c004de916fd.png" width="150">  |
-Desktop (Listing)                   |        Tablet (Listing)            | Mobile (Listing)          |
+Desktop (Homepage)                   |        Tablet (Homepage)            | Mobile (Homepage)          |
  <img src="https://user-images.githubusercontent.com/56780129/144084155-727d2bc6-dea3-4fe6-b7ae-6f5b3b961d91.png" width="400">| <img src="https://user-images.githubusercontent.com/56780129/144084207-f4bf7d7d-86b6-4891-bf9f-8ae2e7b15e36.png" width="200">  | <img src="https://user-images.githubusercontent.com/56780129/144084257-40b9278b-d0d6-40a9-b5fb-2bf76a21d880.png" width="150">  |
 
 
