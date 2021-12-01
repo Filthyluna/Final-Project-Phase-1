@@ -4,9 +4,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
   <title>Document</title>
 </head>
 <body>
-  <script type="model" src="../js/script.js"></script>
+  <header class="header">
+    <nav class='navbar'>
+      <div class='nav-menu'>
+           <a href="Home.html" class="nav-link"><button>Home</button></a>
+            <a href="List.html" class="nav-link"><button>List</button></a>
+      </div>
+    </nav>
+  </header>
+  
+  <div class="searchbox">
+    <div id="fill">
+  <input type="text" name="Name/Id" value="" Class="find-poke" placeholder="Name or ID">
+    </div>
+  <button type="submit">Find</button>
+  </div>
+  <script type="module" src="../js/script.js"></script>
 </body>
 </html>
