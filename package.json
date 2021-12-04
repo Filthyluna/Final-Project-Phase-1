@@ -1,0 +1,17 @@
+{
+  "name": "pokeseek",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Filthyluna/Final-Project-Phase-1.git",
+  "author": "Mel <tidyluna8@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.0.1"
+  },
+  "dependencies": {
+    "axios": "^0.24.0"
+  },
+  "scripts":{
+    "start": "parcel ./html/List.html"
+  } 
+}
