@@ -12,6 +12,6 @@
     "axios": "^0.24.0"
   },
   "scripts":{
-    "start": "parcel ./html/List.html"
+    "start": "parcel ./html/list.html"
   } 
 }

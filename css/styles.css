@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;;
+    height: 100vh;
+  }
+
+  body{
+      background-color:#FFFEED;
+  }
+
+  #logo{
+     font-size:4em;
+      /*border: 1px solid green;*/
+      color:white;
+      float: right;
+      margin-top:8px;
+  }
+
+  .header {
+      display:flex;
+      border-bottom: 1px solid #e2e8f0;
+      background-image: linear-gradient(to right,#6B03BD 20%,#9859E9);
+  }
+  .navbar{
+      /*display:flex;*/
+      justify-content:space-between;
+      width: 100%;
+      align-items:center;
+      padding:1rem 1.5rem;
+      height: 100%;
+      border: 1px solid red;
+      
+  }
+  #hamitems{
+      display:flex;
+      float:left;
+  }
+  #hamitems a{
+      flex-grow: 1;
+      flex-basis: 0;
+      padding: 10px;
+      text-decoration: none;
+      text-align: center;
+      
+  }
+  #hamitems a:hover{
+      background-color: #7b06d5;
+  }
+  .navbar label, #hamburger{
+      display:none;
+  }
+  nav button{
+    padding:15px 32px;
+    border:none;
+    background-color:#6B03BD;
+    font-size:16px;
+    height: 100%;
+    color:white;
+}
+nav button:hover{
+    background-color:#7b06d5;
+}
+
+.searchbox{
+    display:flex;
+    justify-content:center;
+    /*border: solid red;*/
+    max-width:50%;
+    padding:25px;
+    margin-left: 28%;
+    margin-top:3rem;
+}
+
+.searchbox button{
+      padding:15px 32px;
+      border-radius:15px;
+      border:none;
+      background-color:#6B03BD;
+      font-size:16px;    
+}
+.searchbox button:hover{
+    background-color:#7b06d5;
+    box-shadow: 5px 5px 6px 0 rgba(0, 0, 0, 0.379) 
+}
+#fill{
+    /*border:solid green*/
+    padding:2px;
+}
+
+input{
+    
+    height:5rem;
+    width:inherit;
+    /*border-radius:10px;*/
+    font-size:30px;
+    border-radius: 20px;
+}
+
+  @media only screen and (max-width: 768px) {
+    .navbar{
+        display:inline-block;
+        width: 100%;
+        align-items:center;
+        padding:.5rem 1.5rem;
+        height: 100%;
+    }
+    #logo{
+        float:right;
+    }
+    #hamitems{
+        display:flex;
+        float:none;
+    }
+      
+   #hamitems a{
+     box-sizing: border-box;
+     display: block;
+     width: 100%;
+     border-top: 1px solid #333;
+  }
+  nav button{
+    padding:15px 32px;
+    border:none;
+    background-color:#6c03bd00;
+    font-size:16px;
+    height: 100%;
+  }
+  .navbar label {
+      display:inline-block;
+      color:white;
+      background:#6B03BD;
+      font-style: normal;
+      font-size: 2em;
+      padding:10px;
+  }
+  #hamitems{
+      display:none;
+  }
+  .navbar input:checked~#hamitems{
+      display:block;
+  }
+}
+
+/*card layout*/
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-between;
+  justify-content: center;
+  margin: 0;
+  max-width: 1000px;
+}
+
+.card{
+  background-color: cadetblue;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 50px;
+  text-align: center;
+  
+}
