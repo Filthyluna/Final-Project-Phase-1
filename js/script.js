@@ -1,24 +1,11 @@
 import axios from "axios"
 let url = 'https://pokeapi.co/api/v2/pokemon/'
 
-async function showPokemon() {
-  await axios.get(url)
-    .then(res => res.data.results)
-    .then(data => {
-        data.map(pokemon => {
-          createCard(pokemon);
-        })
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-}
-
-async function createCard(pokemon) {
-  await axios.get(pokemon.url)
+async function createCard() {
+  for (let i = 1; i <= 150; i++){
+    await axios.get(url + i)
     .then(res => res.data)
     .then(data => {
-      console.log(data)
       //Create card
       const card = document.createElement('div');
       card.className = 'card';
@@ -40,7 +27,7 @@ async function createCard(pokemon) {
 
       const title = document.createElement('h1');
       title.className = 'card_title'
-      title.textContent = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
+      title.textContent = data.name[0].toUpperCase() + data.name.slice(1);
       card_content.appendChild(title);
       card.appendChild(title);
 
@@ -57,6 +44,7 @@ async function createCard(pokemon) {
     .catch((err) => {
       console.log(err);
     })
+  }
 }
 
-showPokemon();
+createCard();

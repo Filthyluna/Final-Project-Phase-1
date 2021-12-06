@@ -152,8 +152,8 @@ input{
   flex-wrap: wrap;
   align-items: space-between;
   justify-content: center;
-  margin: 0;
-  max-width: 1000px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .card{
@@ -164,5 +164,4 @@ input{
   margin: 15px;
   padding: 50px;
   text-align: center;
-  
 }
