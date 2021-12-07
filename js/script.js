@@ -1,6 +1,9 @@
 import axios from "axios"
 let url = 'https://pokeapi.co/api/v2/pokemon/'
 
+const random = document.querySelector('#randomPokemon');
+const maincontainer = document.querySelector('#main');
+const randButton = document.getElementById("random");
 
 const typeColors = {
   normal:"#e0e0e0",
@@ -67,8 +70,7 @@ async function createCard() {
       // card_content.appendChild(info);
       // card.appendChild(info);
 
-      const getcontainer = document.querySelector('#main');
-      getcontainer.appendChild(card);
+      maincontainer.appendChild(card);
     })
     .catch((err) => {
       console.log(err);
@@ -146,8 +148,8 @@ async function randomCard() {
       // card_content.appendChild(info);
       // card.appendChild(info);
       
-      const getcontainer = document.querySelector('#randomPokemon');
-      getcontainer.appendChild(card);
+      
+      random.appendChild(card);
     })
     .catch((err) => {
       console.log(err);
@@ -155,4 +157,16 @@ async function randomCard() {
 }
 
 randomCard();
+
+randButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  clearInfo();
+  randomCard();
+});
+
+const clearInfo = () => {
+  while (random.firstChild) {
+    random.firstChild.remove();
+  }
+};
 
