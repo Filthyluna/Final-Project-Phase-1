@@ -152,8 +152,7 @@ input{
   flex-wrap: wrap;
   align-items: space-between;
   justify-content: center;
-  margin-left: 100px;
-  margin-right: 100px;
+  
 }
 
 .card{
@@ -161,7 +160,18 @@ input{
   border-style: solid;
   border-width: 2px;
   border-radius: 10px;
-  margin: 15px;
+  margin: 14px;
   padding: 50px;
   text-align: center;
+  max-width: 190px;
 }
+
+.card h1 h2{
+  text-align: center;
+}
+
+
+
+
+
+
