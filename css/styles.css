@@ -78,13 +78,13 @@ nav button:hover{
 
 .searchbox button{
       padding:15px 32px;
-      border-radius:15px;
+      border-radius:10px;
       border:none;
-      background-color:#6B03BD;
+      background-color:#D3B8F5;
       font-size:16px;    
 }
 .searchbox button:hover{
-    background-color:#7b06d5;
+    background-color:#865db9;
     box-shadow: 5px 5px 6px 0 rgba(0, 0, 0, 0.379) 
 }
 #fill{
@@ -98,10 +98,10 @@ input{
     width:inherit;
     /*border-radius:10px;*/
     font-size:30px;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
-  @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .navbar{
         display:inline-block;
         width: 100%;
@@ -160,31 +160,29 @@ input{
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .card{
+  /* If no color then this is the stand in*/
   background-color: cadetblue;
   border-style: solid;
-  border-width: 3px;
+  border-width: 2px;
   border-radius: 10px;
-  margin: 14px;
+  margin: 12px;
   padding-bottom: 50px;
   padding-right: 10px;
   padding-left: 10px;
   padding-top: 10px;
-  max-width: 190px;
+  max-width: 180px;
 }
 
 .card img{
-  width: 120px;
+  width: 160px;
+  height: auto;
 }
 
-.randomPokemon{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
 
 
