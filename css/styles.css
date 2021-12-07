@@ -75,6 +75,7 @@ nav button:hover{
 }
 
 .searchbox button{
+      height: 5rem;
       padding:15px 32px;
       border-radius:10px;
       border:none;
@@ -85,13 +86,19 @@ nav button:hover{
     background-color:#865db9;
     box-shadow: 5px 5px 6px 0 rgba(0, 0, 0, 0.379) 
 }
+
+::placeholder{
+  padding-left: 10px;
+  font-size: 24px;
+}
+
 #fill{
     /*border:solid green*/
     padding:2px;
 }
 
-input{
-    
+input{ 
+    border-width: 3px;
     height:5rem;
     width:inherit;
     /*border-radius:10px;*/
@@ -162,12 +169,10 @@ input{
   margin-right: 5%;
 }
 
-<<<<<<< HEAD
-.card{
-  /* If no color then this is the stand in*/
-=======
+
+/* If no color then this is the stand in*/
 .container .card{
->>>>>>> 7885198d84a05bd9e04ce05b8fa251132af663bb
+
   background-color: cadetblue;
   border-style: solid;
   border-width: 2px;
@@ -185,8 +190,6 @@ input{
   height: auto;
 }
 
-<<<<<<< HEAD
-=======
 #randomPokemon {
   
   align-items: center;
@@ -205,15 +208,14 @@ input{
     width: auto;
     
 }
-.card_title{
+#randomPokemon .card_title{
     margin-left: 80px;
 }
 
-#randomPokemon .card{
-    
-    max-width: 700px;
-    height: 400px;
-    border-style: solid;
+#randomPokemon .card{  
+  max-width: 700px;
+  height: 400px;
+  border-style: solid;
   border-width: 3px;
   border-radius: 10px;
   padding-bottom: 50px;
@@ -222,10 +224,9 @@ input{
   padding-top: 10px;
   margin-left: 20%;
   margin-right: 20%;
-  margin-bottom:25px;
-    
+  margin-bottom:25px;   
 }
->>>>>>> 7885198d84a05bd9e04ce05b8fa251132af663bb
+
 
 
 

@@ -78,6 +78,27 @@ async function createCard() {
 
 createCard();
 
+const infoColors = {
+  normal:"#e0e0e0",
+  fighting:"#F0E8D1",
+  flying:"#A7B5D1",
+  poison:"#A977AA",
+  ground:"#C3A17A",
+  rock:"#C7B470",
+  bug:"#FCE09A",
+  ghost:"#BDAAE5",
+  steel:"#E3E6F1",
+  fire:"#ff8a8a",
+  water:"#ADCEFF",
+  grass:"#AAE396",
+  electric:"#FAF57A",
+  psychic:"#ff9cd1",
+  ice:"#C7F8FF",
+  dragon:"#B1ABFA",
+  dark:"#9C9FBE",
+  fairy:"#F7CBE5"
+}
+
 async function randomCard() {
  
   let pokemon = Math.floor(Math.random() * 150);
@@ -98,18 +119,13 @@ async function randomCard() {
       card_content.appendChild(number);
       card.appendChild(number);
 
-
-
       //Get pokemon image
       const img = document.createElement('img');
       img.src = data.sprites.front_default;
       img.className = 'card-image-front';
       card.appendChild(img);
+        
       //Fill card elements
-      
-
-     
-
       const title = document.createElement('h1');
       title.className = 'card_title'
       title.textContent = data.name[0].toUpperCase() + data.name.slice(1);
