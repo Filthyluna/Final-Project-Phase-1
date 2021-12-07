@@ -1,6 +1,7 @@
 import axios from "axios"
 let url = 'https://pokeapi.co/api/v2/pokemon/'
 
+
 const typeColors = {
   normal:"#e0e0e0",
   fighting:"#F0E8D1",
@@ -78,6 +79,7 @@ async function createCard() {
 createCard();
 
 async function randomCard() {
+ 
   let pokemon = Math.floor(Math.random() * 150);
     await axios.get(url + pokemon)
     .then(res => res.data)
@@ -86,20 +88,27 @@ async function randomCard() {
       const card = document.createElement('div');
       card.className = 'card';
 
+      const card_content = document.createElement('div');
+      card_content.className = 'card_body';
+
+      
+      const number = document.createElement('h2');
+      number.className = "number";
+      number.textContent = "#" + data.id.toString().padStart(3, 0);
+      card_content.appendChild(number);
+      card.appendChild(number);
+
+
+
       //Get pokemon image
       const img = document.createElement('img');
       img.src = data.sprites.front_default;
       img.className = 'card-image-front';
       card.appendChild(img);
       //Fill card elements
-      const card_content = document.createElement('div');
-      card_content.className = 'card_body';
+      
 
-      const number = document.createElement('h2');
-      number.className = "number";
-      number.textContent = "#" + data.id.toString().padStart(3, 0);
-      card_content.appendChild(number);
-      card.appendChild(number);
+     
 
       const title = document.createElement('h1');
       title.className = 'card_title'
@@ -120,7 +129,7 @@ async function randomCard() {
       // info.textContent = data.types.map(type => type.type.name).join(', ');
       // card_content.appendChild(info);
       // card.appendChild(info);
-
+      
       const getcontainer = document.querySelector('#randomPokemon');
       getcontainer.appendChild(card);
     })
