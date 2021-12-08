@@ -4,55 +4,54 @@ let url = 'https://pokeapi.co/api/v2/pokemon/'
 const random = document.querySelector('#randomPokemon');
 const randButton = document.getElementById("random");
 const input = document.getElementById("input");
+const submit = document.getElementById("submit");
 
 const typeColors = {
-  normal:"#e0e0e0",
-  fighting:"#F0E8D1",
-  flying:"#A7B5D1",
-  poison:"#A977AA",
-  ground:"#C3A17A",
-  rock:"#C7B470",
-  bug:"#FCE09A",
-  ghost:"#BDAAE5",
-  steel:"#E3E6F1",
-  fire:"#ff8a8a",
-  water:"#ADCEFF",
-  grass:"#AAE396",
-  electric:"#FAF57A",
-  psychic:"#ff9cd1",
-  ice:"#C7F8FF",
-  dragon:"#B1ABFA",
-  dark:"#9C9FBE",
-  fairy:"#F7CBE5"
+  normal: "#e0e0e0",
+  fighting: "#F0E8D1",
+  flying: "#A7B5D1",
+  poison: "#A977AA",
+  ground: "#C3A17A",
+  rock: "#C7B470",
+  bug: "#FCE09A",
+  ghost: "#BDAAE5",
+  steel: "#E3E6F1",
+  fire: "#ff8a8a",
+  water: "#ADCEFF",
+  grass: "#AAE396",
+  electric: "#FAF57A",
+  psychic: "#ff9cd1",
+  ice: "#C7F8FF",
+  dragon: "#B1ABFA",
+  dark: "#9C9FBE",
+  fairy: "#F7CBE5"
 }
 
 const infoColors = {
-  normal:"#e0e0e0",
-  fighting:"#F0E8D1",
-  flying:"#A7B5D1",
-  poison:"#A977AA",
-  ground:"#C3A17A",
-  rock:"#C7B470",
-  bug:"#FCE09A",
-  ghost:"#BDAAE5",
-  steel:"#E3E6F1",
-  fire:"#ff8a8a",
-  water:"#ADCEFF",
-  grass:"#AAE396",
-  electric:"#FAF57A",
-  psychic:"#ff9cd1",
-  ice:"#C7F8FF",
-  dragon:"#B1ABFA",
-  dark:"#9C9FBE",
-  fairy:"#F7CBE5"
+  normal: "#e0e0e0",
+  fighting: "#F0E8D1",
+  flying: "#A7B5D1",
+  poison: "#A977AA",
+  ground: "#C3A17A",
+  rock: "#C7B470",
+  bug: "#FCE09A",
+  ghost: "#BDAAE5",
+  steel: "#E3E6F1",
+  fire: "#ff8a8a",
+  water: "#ADCEFF",
+  grass: "#AAE396",
+  electric: "#FAF57A",
+  psychic: "#ff9cd1",
+  ice: "#C7F8FF",
+  dragon: "#B1ABFA",
+  dark: "#9C9FBE",
+  fairy: "#F7CBE5"
 }
 
-async function randomCard() {
- 
-  let pokemon = Math.floor(Math.random() * 150);
-    await axios.get(url + pokemon)
+async function createCard(id) {
+  await axios.get(url + id)
     .then(res => res.data)
-      .then(data => {
+    .then(data => {
       //Create card
       const card = document.createElement('div');
       card.className = 'card';
@@ -60,7 +59,7 @@ async function randomCard() {
       const card_content = document.createElement('div');
       card_content.className = 'card_body';
 
-      
+
       const number = document.createElement('h2');
       number.className = "number";
       number.textContent = "#" + data.id.toString().padStart(3, 0);
@@ -72,7 +71,7 @@ async function randomCard() {
       img.src = data.sprites.front_default;
       img.className = 'card-image-front';
       card.appendChild(img);
-        
+
       //Fill card elements
       const title = document.createElement('h1');
       title.className = 'card_title'
@@ -93,8 +92,8 @@ async function randomCard() {
       // info.textContent = data.types.map(type => type.type.name).join(', ');
       // card_content.appendChild(info);
       // card.appendChild(info);
-      
-      
+
+
       random.appendChild(card);
     })
     .catch((err) => {
@@ -102,12 +101,17 @@ async function randomCard() {
     })
 }
 
-randomCard();
+async function generateRandom() {
+  let id = Math.floor(Math.random() * 150);
+  createCard(id);
+}
+
+generateRandom();
 
 randButton.addEventListener("click", (event) => {
   event.preventDefault();
   clearInfo();
-  randomCard();
+  generateRandom();
 });
 
 const clearInfo = () => {
@@ -115,3 +119,10 @@ const clearInfo = () => {
     random.firstChild.remove();
   }
 };
+
+submit.addEventListener("click", (event) => {
+  event.preventDefault();
+  clearInfo();
+  let value = input.value.toLowerCase();
+  createCard(value);
+});

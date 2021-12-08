@@ -1,90 +1,96 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;;
-    height: 100vh;
-  }
-
-  body{
-      background-color:#FFFEED;
-  }
-
-  #logo{
-     font-size:4em;
-      /*border: 1px solid green;*/
-      color:white;
-      float: right;
-      margin-top:8px;
-  }
-
-  .header {
-      display:flex;
-      border-bottom: 1px solid #e2e8f0;
-      background-image: linear-gradient(to right,#6B03BD 20%,#9859E9);
-  }
-  .navbar{
-      /*display:flex;*/
-      justify-content:space-between;
-      width: 100%;
-      align-items:center;
-      padding:1rem 1.5rem;
-      height: 100%;
-  }
-  #hamitems{
-      display:flex;
-      float:left;
-  }
-  #hamitems a{
-      flex-grow: 1;
-      flex-basis: 0;
-      padding: 10px;
-      text-decoration: none;
-      text-align: center;
-      
-  }
-  #hamitems a:hover{
-      background-color: #7b06d5;
-  }
-  .navbar label, #hamburger{
-      display:none;
-  }
-  nav button{
-    padding:15px 32px;
-    border:none;
-    background-color:#6B03BD;
-    font-size:16px;
-    height: 100%;
-    color:white;
+  font-size: 62.5%;;
+  height: 100vh;
 }
+
+body{
+    background-color:#FFFEED;
+}
+
+#logo{
+    font-size:4em;
+    /*border: 1px solid green;*/
+    color:white;
+    float: right;
+    margin-top:8px;
+}
+
+.header {
+    display:flex;
+    border-bottom: 1px solid #e2e8f0;
+    background-image: linear-gradient(to right,#6B03BD 20%,#9859E9);
+}
+
+.navbar{
+    /*display:flex;*/
+    justify-content:space-between;
+    width: 100%;
+    align-items:center;
+    padding:1rem 1.5rem;
+    height: 100%;
+}
+
+#hamitems{
+  display:flex;
+  float:left;
+}
+
+#hamitems a{
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+}
+
+#hamitems a:hover{
+  background-color: #7b06d5;
+}
+.navbar label, #hamburger{
+    display:none;
+}
+
+nav button{
+  padding:15px 32px;
+  border:none;
+  background-color:#6B03BD;
+  font-size:16px;
+  height: 100%;
+  color:white;
+}
+
 nav button:hover{
-    background-color:#7b06d5;
+  background-color:#7b06d5;
 }
 
 .searchbox{
-    display:flex;
-    justify-content:center;
-    /*border: solid red;*/
-    max-width:50%;
-    padding:25px;
-    margin-left: 28%;
-    margin: auto;
+  display:flex;
+  justify-content:center;
+  /*border: solid red;*/
+  max-width:50%;
+  padding:25px;
+  margin-left: 28%;
+  margin: auto;
 }
 
 .searchbox button{
-      height: 5rem;
-      padding:15px 32px;
-      border-radius:10px;
-      border:none;
-      background-color:#D3B8F5;
-      font-size:16px;    
+  height: 5rem;
+  padding:15px 32px;
+  border-radius:10px;
+  border:none;
+  background-color:#D3B8F5;
+  font-size:16px;    
+  cursor: pointer;
 }
 .searchbox button:hover{
-    background-color:#865db9;
-    box-shadow: 5px 5px 6px 0 rgba(0, 0, 0, 0.379) 
+  background-color:#865db9;
+  box-shadow: 5px 5px 6px 0 rgba(0, 0, 0, 0.379) 
 }
 
 ::placeholder{
@@ -93,61 +99,65 @@ nav button:hover{
 }
 
 #fill{
-    /*border:solid green*/
-    padding:2px;
+  /*border:solid green*/
+  padding:2px;
 }
 
 input{ 
-    border-width: 3px;
-    height:5rem;
-    width:inherit;
-    /*border-radius:10px;*/
-    font-size:30px;
-    border-radius: 10px;
+  border-width: 3px;
+  height:5rem;
+  width:inherit;
+  /*border-radius:10px;*/
+  font-size:30px;
+  border-radius: 10px;
 }
 
 @media only screen and (max-width: 768px) {
-    .navbar{
-        display:inline-block;
-        width: 100%;
-        align-items:center;
-        padding:.5rem 1.5rem;
-        height: 100%;
-    }
-    #logo{
-        float:right;
-    }
-    #hamitems{
-        display:flex;
-        float:none;
-    }
-      
-   #hamitems a{
-     box-sizing: border-box;
-     display: block;
-     width: 100%;
-     border-top: 1px solid #333;
-  }
-  nav button{
-    padding:15px 32px;
-    border:none;
-    background-color:#6c03bd00;
-    font-size:16px;
-    height: 100%;
-  }
-  .navbar label {
+  .navbar{
       display:inline-block;
-      color:white;
-      background:#6B03BD;
-      font-style: normal;
-      font-size: 2em;
-      padding:10px;
+      width: 100%;
+      align-items:center;
+      padding:.5rem 1.5rem;
+      height: 100%;
+  }
+  #logo{
+      float:right;
   }
   #hamitems{
-      display:none;
+      display:flex;
+      float:none;
   }
-  .navbar input:checked~#hamitems{
-      display:block;
+    
+  #hamitems a{
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-top: 1px solid #333;
+}
+
+nav button{
+  padding:15px 32px;
+  border:none;
+  background-color:#6c03bd00;
+  font-size:16px;
+  height: 100%;
+}
+
+.navbar label {
+    display:inline-block;
+    color:white;
+    background:#6B03BD;
+    font-style: normal;
+    font-size: 2em;
+    padding:10px;
+}
+
+#hamitems{
+    display:none;
+}
+
+.navbar input:checked~#hamitems{
+    display:block;
   }
 }
 
@@ -157,7 +167,7 @@ input{
   flex-wrap: wrap;
   align-items: space-between;
   justify-content: center;
-  
+
 }
 
 #main{
@@ -172,7 +182,6 @@ input{
 
 /* If no color then this is the stand in*/
 .container .card{
-
   background-color: cadetblue;
   border-style: solid;
   border-width: 2px;
@@ -192,37 +201,39 @@ input{
 }
 
 #randomPokemon {
-  
   align-items: center;
   margin-top:30px;
-  
 }
+
 #random{
-    margin-left:45%;
-    margin-right:45%;
-    padding:16px 25px;
-    border-radius: 20em;
-    border: none;
-    background-color:#D3B8F5;
-    margin-bottom:10px
+  margin-left:45%;
+  margin-right:45%;
+  padding:16px 25px;
+  border-radius: 20em;
+  border: none;
+  background-color:#D3B8F5;
+  margin-bottom:10px
 }
+
 #random:hover{
-    box-shadow: 5px rgba(0, 0, 0, 0.379);
-    border:.5px solid black;
-    background-color:#865db9;
-    color: white;
+  box-shadow: 5px rgba(0, 0, 0, 0.379);
+  border:.5px solid black;
+  background-color:#865db9;
+  color: white;
 }
 
 #randomPokemon .number{
-    text-align: center;
+  text-align: center;
 }
+
 #randomPokemon img{
-    height: 250px;
-    width: auto;
-    
+  height: 250px;
+  width: auto;
+  
 }
+
 #randomPokemon .card_title{
-    margin-left: 80px;
+  margin-left: 80px;
 }
 
 #randomPokemon .card{  
