@@ -71,7 +71,7 @@ nav button:hover{
     max-width:50%;
     padding:25px;
     margin-left: 28%;
-    margin-top:3rem;
+    margin: auto;
 }
 
 .searchbox button{
@@ -235,9 +235,7 @@ input{
   padding-right: 10px;
   padding-left: 10px;
   padding-top: 10px;
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-bottom:25px;  
+  margin: auto;  
   box-shadow: 7px 8px 0px 0px rgba(8, 1, 1, 0.358); 
 }
 
