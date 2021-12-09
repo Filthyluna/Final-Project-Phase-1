@@ -223,18 +223,14 @@ nav button{
   color: white;
 }
 
-#randomPokemon .number{
-  text-align: center;
-}
-
 #randomPokemon img{
   height: 250px;
   width: auto;
   
 }
 
-#randomPokemon .card_title{
-  margin-left: 80px;
+#randomPokemon .card-title{
+  text-align: center;
 }
 
 #randomPokemon .card{  

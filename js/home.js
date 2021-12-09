@@ -59,25 +59,19 @@ async function createCard(id) {
       const card_content = document.createElement('div');
       card_content.className = 'card_body';
 
-
-      const number = document.createElement('h2');
-      number.className = "number";
-      number.textContent = "#" + data.id.toString().padStart(3, 0);
-      card_content.appendChild(number);
-      card.appendChild(number);
+      //Fill card elements
+      const title = document.createElement('h1');
+      title.className = 'card-title';
+      let number = "#" + data.id.toString().padStart(3, 0);
+      let name = data.name[0].toUpperCase() + data.name.slice(1);
+      title.textContent = `${name} ${number}`;
+      card_content.appendChild(title);
 
       //Get pokemon image
       const img = document.createElement('img');
       img.src = data.sprites.front_default;
       img.className = 'card-image-front';
-      card.appendChild(img);
-
-      //Fill card elements
-      const title = document.createElement('h1');
-      title.className = 'card_title'
-      title.textContent = data.name[0].toUpperCase() + data.name.slice(1);
-      card_content.appendChild(title);
-      card.appendChild(title);
+      card_content.appendChild(img);
 
       //Color of Background
       const main_types = Object.keys(typeColors);
@@ -86,14 +80,30 @@ async function createCard(id) {
       const color = typeColors[type];
       card.style.backgroundColor = color;
 
+      //Information box
+      const info = document.createElement('div');
+      info.className = "info-box";
 
-      // const info = document.createElement('h2');
-      // info.className = 'card_text';
-      // info.textContent = data.types.map(type => type.type.name).join(', ');
-      // card_content.appendChild(info);
-      // card.appendChild(info);
+      const typing = document.createElement('li');
+      typing.className = 'card_text';
+      let typeText = data.types.map(type => type.type.name[0].toUpperCase() + type.type.name.slice(1)).join(', ');
+      typing.textContent = `Type: ${typeText}`;
+      info.appendChild(typing);
 
+      const weight = document.createElement('li');
+      weight.className = 'card_text';
+      let weightTxt = Math.round((data.weight/4.536)*10)/10;
+      weight.textContent = `Weight: ${weightTxt} lb`;
+      info.appendChild(weight);
 
+      const height = document.createElement('li');
+      height.className = 'card_text';
+      let heightTxt = Math.round((data.height/3.048)*10)/10;
+      height.textContent = `Weight: ${heightTxt} ft`;
+      info.appendChild(height);
+
+      card_content.appendChild(info);
+      card.appendChild(card_content);
       random.appendChild(card);
     })
     .catch((err) => {
