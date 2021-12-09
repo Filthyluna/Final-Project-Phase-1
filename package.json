@@ -12,6 +12,10 @@
     "axios": "^0.24.0"
   },
   "scripts":{
-    "start": "parcel ./html/home.html"
-  } 
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html"
+  },
+  "browserslist": [
+    "last 1 chrome version"
+  ]
 }
