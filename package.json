@@ -1,17 +1,16 @@
 {
-  "name": "pokeseek",
+  "name": "PokeSeek",
   "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/Filthyluna/Final-Project-Phase-1.git",
+  "repository": "https://github.com/Filthyluna/PokeSeek.git",
   "author": "Mel <tidyluna8@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
-    "parcel": "^2.0.1"
-  },
   "dependencies": {
     "axios": "^0.24.0"
   },
-  "scripts":{
+  "devDependencies": {
+    "parcel": "^2.0.1"
+  },
+  "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html"
   },
