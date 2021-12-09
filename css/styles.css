@@ -113,54 +113,7 @@ input{
   padding-left: 10px;
 }
 
-@media only screen and (max-width: 768px) {
-  .navbar{
-      display:inline-block;
-      width: 100%;
-      align-items:center;
-      padding:.5rem 1.5rem;
-      height: 100%;
-  }
-  #logo{
-      float:right;
-  }
-  #hamitems{
-      display:flex;
-      float:none;
-  }
-    
-  #hamitems a{
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    border-top: 1px solid #333;
-}
 
-nav button{
-  padding:15px 32px;
-  border:none;
-  background-color:#6c03bd00;
-  font-size:16px;
-  height: 100%;
-}
-
-.navbar label {
-    display:inline-block;
-    color:white;
-    background:#6B03BD;
-    font-style: normal;
-    font-size: 2em;
-    padding:10px;
-}
-
-#hamitems{
-    display:none;
-}
-
-.navbar input:checked~#hamitems{
-    display:block;
-  }
-}
 
 /*card layout*/
 .container{
@@ -208,7 +161,6 @@ nav button{
 
 #random{
   margin-left:45%;
-  margin-right:45%;
   padding:16px 25px;
   border-radius: 20em;
   border: none;
@@ -223,18 +175,26 @@ nav button{
   color: white;
 }
 
+#randomPokemon .number{
+  text-align: center;
+  border: solid red;
+}
+
 #randomPokemon img{
   height: 250px;
   width: auto;
+  border: solid red;
   
 }
 
-#randomPokemon .card-title{
+#randomPokemon .card_title{
+  margin-left: 80px;
+  border: solid red;
   text-align: center;
 }
 
 #randomPokemon .card{  
-  max-width: 700px;
+  max-width: 600px;
   height: 400px;
   border-style: solid;
   border-width: 3px;
@@ -247,9 +207,107 @@ nav button{
   box-shadow: 7px 8px 0px 0px rgba(8, 1, 1, 0.358); 
 }
 
+.card_text{
+  float: right;
+  border: solid red;
+}
 
+@media only screen and (max-width: 375px) {
+  .navbar{
+      display:inline-block;
+      width: 100%;
+      align-items:center;
+      padding:.5rem 1.5rem;
+      height: 100%;
+  }
+  #logo{
+      float:right;
+  }
+  #hamitems{
+      display:flex;
+      float:none;
+  }
+    
+  #hamitems a{
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-top: 1px solid #333;
+}
 
+nav button{
+  padding:15px 32px;
+  border:none;
+  background-color:#6c03bd00;
+  font-size:16px;
+  height: 100%;
+}
 
+.navbar label {
+    display:inline-block;
+    color:white;
+    background:#6B03BD;
+    font-style: normal;
+    font-size: 2em;
+    padding:10px;
+}
 
+#hamitems{
+    display:none;
+}
+
+.navbar input:checked~#hamitems{
+    display:block;
+  }
+
+  input{ 
+    border-width: 3px;
+    height:5rem;
+    width:inherit;
+    /*border-radius:10px;*/
+    font-size:20px;
+    border-radius: 10px;
+    padding-left: 10px;
+  }
+
+  #random{
+   margin-left:35%;
+    margin-right:0%;
+    padding:16px 25px;
+    border-radius: 20em;
+    border: none;
+    background-color:#D3B8F5;
+    margin-bottom:10px
+  }
+
+  #randomPokemon .card{ 
+     
+    max-width: 60vh;
+    height: 400px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    padding-bottom: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin: 25px;  
+    box-shadow: 7px 8px 0px 0px rgba(8, 1, 1, 0.358); 
+  }
+
+  #randomPokemon img{
+    height: 200px;
+    width: auto;
+    border: solid red;
+    
+  }
+
+  .card_text{
+    margin-top:15px;
+    margin-bottom:15px;
+    float: none;
+    border: solid red;
+  }
+}
 
 

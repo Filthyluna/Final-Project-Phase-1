@@ -55,6 +55,7 @@ async function createCard(id) {
       //Create card
       const card = document.createElement('div');
       card.className = 'card';
+      const infoCard = document.createElement('div');
 
       const card_content = document.createElement('div');
       card_content.className = 'card_body';
@@ -67,11 +68,17 @@ async function createCard(id) {
       title.textContent = `${name} ${number}`;
       card_content.appendChild(title);
 
+      
+      
+
+
       //Get pokemon image
       const img = document.createElement('img');
       img.src = data.sprites.front_default;
       img.className = 'card-image-front';
       card_content.appendChild(img);
+
+    
 
       //Color of Background
       const main_types = Object.keys(typeColors);
