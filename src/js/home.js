@@ -120,7 +120,7 @@ async function createCard(id) {
 }
 
 async function generateRandom() {
-  let id = Math.floor(Math.random() * 150);
+  let id = Math.floor(Math.random() * 898);
   createCard(id);
 }
 

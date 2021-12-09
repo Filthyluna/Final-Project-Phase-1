@@ -30,7 +30,7 @@ async function createCard(id) {
   await axios.get(url + id)
     .then(res => res.data)
     .then(data => {
-      //Create card
+      //Create card - turn it into a button so that it is clickable
       const card = document.createElement('div');
       card.className = 'card';
 
@@ -63,6 +63,11 @@ async function createCard(id) {
 
       card.appendChild(card_content);
       maincontainer.appendChild(card);
+
+      // card.addEventListener("click", (event) => {
+      //   event.preventDefault();
+      //   clearInfo();
+      // })
     })
     .catch((err) => {
       console.log(err);
@@ -70,7 +75,7 @@ async function createCard(id) {
 }
 
 async function createList(){
-  for (let i = 1; i <= 150; i++){
+  for (let i = 1; i <= 898; i++){
     await createCard(i);
   }
 }

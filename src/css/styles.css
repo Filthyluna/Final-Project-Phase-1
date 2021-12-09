@@ -52,6 +52,7 @@ body{
 #hamitems a:hover{
   background-color: #7b06d5;
 }
+
 .navbar label, #hamburger{
     display:none;
 }
@@ -144,6 +145,8 @@ input{
   padding-top: 10px;
   box-shadow: 7px 8px 0px 0px rgba(8, 1, 1, 0.393); 
   text-align: center;
+  cursor: pointer;
+  /* border: solid red; */
 }
 
 img{
@@ -152,9 +155,13 @@ img{
   image-rendering: pixelated;
 }
 
-.card img{
-  width: 200px;
+.container .card img{
+  width: 180px;
   height: auto;
+}
+
+.container .card:hover{
+  background-color: #7b06d5;
 }
 
 #randomPokemon {
@@ -223,7 +230,7 @@ img{
   padding: 25px 5px;
   position: relative;
   top: -230px;
-  left: 300px;
+  left: 330px;
   box-shadow: 3px 5px 0px 0px rgba(8, 1, 1, 0.301); 
 }
 
