@@ -175,7 +175,7 @@ input{
 
 #randomPokemon .number{
   text-align: center;
-  border: solid red;
+  /* border: solid red; */
 }
 
 #randomPokemon img{
@@ -299,7 +299,7 @@ input{
 
   #randomPokemon .card{ 
     max-width: 60vh;
-    height: 400px;
+    height: 500px;
     border-style: solid;
     border-width: 3px;
     border-radius: 10px;
@@ -319,14 +319,13 @@ input{
     height: 200px;
     width: auto;
     /* border: solid red; */
-    
+    position: relative;
+    left: 45px;
   }
-
-  .card_text{
-    margin-top:15px;
-    margin-bottom:15px;
-    float: none;
-    border: solid red;
+  .info-box{
+    position: relative;
+    top: 30px;
+    left: 0px;
   }
 }
 
