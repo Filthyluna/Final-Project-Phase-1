@@ -135,7 +135,7 @@ input{
 
 /* If no color then this is the stand in*/
 .container .card{
-  max-width: 190px;
+  max-width: 210px;
   background-color: cadetblue;
   border-style: solid;
   border-width: 2px;
@@ -156,7 +156,7 @@ img{
 }
 
 .container .card img{
-  width: 180px;
+  width: 200px;
   height: auto;
 }
 
