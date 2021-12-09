@@ -68,17 +68,11 @@ async function createCard(id) {
       title.textContent = `${name} ${number}`;
       card_content.appendChild(title);
 
-      
-      
-
-
       //Get pokemon image
       const img = document.createElement('img');
       img.src = data.sprites.front_default;
       img.className = 'card-image-front';
       card_content.appendChild(img);
-
-    
 
       //Color of Background
       const main_types = Object.keys(typeColors);

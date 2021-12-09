@@ -113,8 +113,6 @@ input{
   padding-left: 10px;
 }
 
-
-
 /*card layout*/
 .container{
   display: flex;
@@ -183,14 +181,17 @@ input{
 #randomPokemon img{
   height: 250px;
   width: auto;
-  border: solid red;
+  position: relative;
+  left: -10px;
+  top: 30px;
+  /* border: solid red; */
   
 }
 
-#randomPokemon .card_title{
-  margin-left: 80px;
-  border: solid red;
+#randomPokemon .card-title{
+  /* border: solid red; */
   text-align: center;
+  font-size: 28px;
 }
 
 #randomPokemon .card{  
@@ -207,9 +208,24 @@ input{
   box-shadow: 7px 8px 0px 0px rgba(8, 1, 1, 0.358); 
 }
 
+.info-box{
+  max-width: 318px;
+  height: 200px;
+  background-color: cadetblue;
+  border: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  padding: 25px 5px;
+  position: relative;
+  top: -180px;
+  left: 240px;
+}
+
 .card_text{
-  float: right;
-  border: solid red;
+  font-size: 24px;
+  list-style: none;
+  padding: 8px;
+  margin: auto;
 }
 
 @media only screen and (max-width: 375px) {
@@ -257,21 +273,21 @@ nav button{
 }
 
 .navbar input:checked~#hamitems{
-    display:block;
-  }
+  display:block;
+}
 
-  input{ 
-    border-width: 3px;
-    height:5rem;
-    width:inherit;
-    /*border-radius:10px;*/
-    font-size:20px;
-    border-radius: 10px;
-    padding-left: 10px;
-  }
+input{ 
+  border-width: 3px;
+  height:5rem;
+  width:inherit;
+  /*border-radius:10px;*/
+  font-size:20px;
+  border-radius: 10px;
+  padding-left: 10px;
+}
 
   #random{
-   margin-left:35%;
+    margin-left:35%;
     margin-right:0%;
     padding:16px 25px;
     border-radius: 20em;
@@ -281,7 +297,6 @@ nav button{
   }
 
   #randomPokemon .card{ 
-     
     max-width: 60vh;
     height: 400px;
     border-style: solid;
@@ -295,10 +310,14 @@ nav button{
     box-shadow: 7px 8px 0px 0px rgba(8, 1, 1, 0.358); 
   }
 
+  #randomPokemon .card-title{
+    text-align: center;
+  }
+
   #randomPokemon img{
     height: 200px;
     width: auto;
-    border: solid red;
+    /* border: solid red; */
     
   }
 
