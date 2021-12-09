@@ -134,21 +134,26 @@ input{
 
 /* If no color then this is the stand in*/
 .container .card{
+  max-width: 190px;
   background-color: cadetblue;
   border-style: solid;
   border-width: 2px;
   border-radius: 10px;
   margin: 12px;
   padding-bottom: 50px;
-  padding-right: 10px;
-  padding-left: 10px;
   padding-top: 10px;
-  max-width: 180px;
   box-shadow: 7px 8px 0px 0px rgba(8, 1, 1, 0.393); 
+  text-align: center;
+}
+
+img{
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
 }
 
 .card img{
-  width: 160px;
+  width: 200px;
   height: auto;
 }
 
@@ -179,11 +184,11 @@ input{
 }
 
 #randomPokemon img{
-  height: 250px;
+  height: 300px;
   width: auto;
   position: relative;
-  left: -10px;
-  top: 30px;
+  left: -0px;
+  top: 0px;
   /* border: solid red; */
   
 }
@@ -195,7 +200,7 @@ input{
 }
 
 #randomPokemon .card{  
-  max-width: 600px;
+  max-width: 700px;
   height: 400px;
   border-style: solid;
   border-width: 3px;
@@ -214,11 +219,11 @@ input{
   background-color: cadetblue;
   border: solid;
   border-width: 2px;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 25px 5px;
   position: relative;
-  top: -180px;
-  left: 244px;
+  top: -230px;
+  left: 300px;
   box-shadow: 3px 5px 0px 0px rgba(8, 1, 1, 0.301); 
 }
 
@@ -240,11 +245,15 @@ input{
   #logo{
       float:right;
   }
+
+  #hamburger{
+    height: 20px;
+  }
+
   #hamitems{
       display:flex;
       float:none;
   }
-    
   #hamitems a{
     box-sizing: border-box;
     display: block;
@@ -287,6 +296,16 @@ input{
   padding-left: 10px;
 }
 
+.container .card{
+  max-width: 380px;
+  height: auto;
+}
+
+.card img{
+  width: 260px;
+  height: auto;
+}
+
   #random{
     margin-left:35%;
     margin-right:0%;
@@ -305,27 +324,24 @@ input{
     border-radius: 10px;
     padding-bottom: 50px;
     padding-right: 10px;
-    padding-left: 10px;
+    
     padding-top: 10px;
-    margin: 25px;  
+    margin: 20px;  
     box-shadow: 7px 8px 0px 0px rgba(8, 1, 1, 0.358); 
   }
 
-  #randomPokemon .card-title{
-    text-align: center;
-  }
-
   #randomPokemon img{
-    height: 200px;
+    height: 250px;
     width: auto;
     /* border: solid red; */
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
+
   .info-box{
     position: relative;
-    top: 30px;
+    top: -20px;
     left: 0px;
     display: block;
     margin-left: auto;

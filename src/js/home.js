@@ -71,6 +71,7 @@ async function createCard(id) {
       //Get pokemon image
       const img = document.createElement('img');
       img.src = data.sprites.front_default;
+      console.log(data.sprites.front);
       img.className = 'card-image-front';
       card_content.appendChild(img);
 
