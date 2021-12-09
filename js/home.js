@@ -16,10 +16,10 @@ const typeColors = {
   bug: "#FCE09A",
   ghost: "#BDAAE5",
   steel: "#E3E6F1",
-  fire: "#ff8a8a",
+  fire: "#f5745b",
   water: "#ADCEFF",
   grass: "#AAE396",
-  electric: "#FAF57A",
+  electric: "#ffdf40",
   psychic: "#ff9cd1",
   ice: "#C7F8FF",
   dragon: "#B1ABFA",
@@ -28,24 +28,24 @@ const typeColors = {
 }
 
 const infoColors = {
-  normal: "#e0e0e0",
-  fighting: "#F0E8D1",
-  flying: "#A7B5D1",
-  poison: "#A977AA",
-  ground: "#C3A17A",
-  rock: "#C7B470",
-  bug: "#FCE09A",
-  ghost: "#BDAAE5",
-  steel: "#E3E6F1",
-  fire: "#ff8a8a",
-  water: "#ADCEFF",
-  grass: "#AAE396",
-  electric: "#FAF57A",
-  psychic: "#ff9cd1",
-  ice: "#C7F8FF",
-  dragon: "#B1ABFA",
-  dark: "#9C9FBE",
-  fairy: "#F7CBE5"
+  normal: "#f0eded",
+  fighting: "#fff9e8",
+  flying: "#fcf5de",
+  poison: "#d292d4",
+  ground: "#f0ca9e",
+  rock: "#f0da8b",
+  bug: "#ffedbf",
+  ghost: "#d2bdff",
+  steel: "#f0f3fc",
+  fire: "#ff9f5e",
+  water: "#cfe2ff",
+  grass: "#DAF2D1",
+  electric: "#fffcab",
+  psychic: "#ffd1ea",
+  ice: "#dbfbff",
+  dragon: "#d2cfff",
+  dark: "#c2c6ed",
+  fairy: "#fcebf5"
 }
 
 async function createCard(id) {
@@ -102,6 +102,12 @@ async function createCard(id) {
       let heightTxt = Math.round((data.height/3.048)*10)/10;
       height.textContent = `Weight: ${heightTxt} ft`;
       info.appendChild(height);
+
+      //Color of Background
+      const subColor = Object.keys(infoColors);
+      const mainColor = subColor.find(type => pokeType.indexOf(type) == 0);
+      const color2 = infoColors[mainColor];
+      info.style.backgroundColor = color2;
 
       card_content.appendChild(info);
       card.appendChild(card_content);

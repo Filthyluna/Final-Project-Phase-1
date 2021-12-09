@@ -205,11 +205,11 @@ input{
   padding-left: 10px;
   padding-top: 10px;
   margin: auto;  
-  box-shadow: 7px 8px 0px 0px rgba(8, 1, 1, 0.358); 
+  box-shadow: 7px 8px 0px 0px rgba(8, 1, 1, 0.301); 
 }
 
 .info-box{
-  max-width: 318px;
+  max-width: 300px;
   height: 200px;
   background-color: cadetblue;
   border: solid;
@@ -218,7 +218,8 @@ input{
   padding: 25px 5px;
   position: relative;
   top: -180px;
-  left: 240px;
+  left: 244px;
+  box-shadow: 3px 5px 0px 0px rgba(8, 1, 1, 0.301); 
 }
 
 .card_text{
