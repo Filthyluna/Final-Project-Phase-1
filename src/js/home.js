@@ -101,7 +101,7 @@ async function createCard(id) {
       const height = document.createElement('li');
       height.className = 'card_text';
       let heightTxt = Math.round((data.height/3.048)*10)/10;
-      height.textContent = `Weight: ${heightTxt} ft`;
+      height.textContent = `Height: ${heightTxt} ft`;
       info.appendChild(height);
 
       //Color of Background
