@@ -318,7 +318,7 @@ input{
 
   #randomPokemon .card{ 
     max-width: 60vh;
-    height: 500px;
+    height: 520px;
     border-style: solid;
     border-width: 3px;
     border-radius: 10px;
@@ -341,7 +341,7 @@ input{
 
   .info-box{
     position: relative;
-    top: -20px;
+    top: -0px;
     left: 0px;
     display: block;
     margin-left: auto;
