@@ -88,11 +88,21 @@ const clearInfo = () => {
   }
 };
 
-submit.addEventListener("click", (event) => {
+function searchEvent(event) {
   event.preventDefault();
   clearInfo();
   let value = input.value.toLowerCase();
   createCard(value);
+}
+
+document.addEventListener("keypress", (event) => {
+  if (event.key === 'Enter') {
+    searchEvent(event);
+  }
+});
+
+submit.addEventListener("click", (event) => {
+  searchEvent(event)
 });
 
 
