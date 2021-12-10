@@ -120,7 +120,6 @@ input{
   flex-wrap: wrap;
   align-items: space-between;
   justify-content: center;
-
 }
 
 #main{
@@ -128,13 +127,13 @@ input{
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 
 /* If no color then this is the stand in*/
-.container .card{
+#main .card{
   max-width: 210px;
   background-color: cadetblue;
   border-style: solid;
@@ -181,11 +180,6 @@ img{
   color: white;
 }
 
-#randomPokemon .number{
-  text-align: center;
-  /* border: solid red; */
-}
-
 #randomPokemon img{
   height: 300px;
   width: auto;
@@ -214,6 +208,7 @@ img{
   padding-top: 10px;
   margin: auto;  
   box-shadow: 7px 8px 0px 0px rgba(8, 1, 1, 0.301); 
+  cursor: pointer;
 }
 
 .info-box{
@@ -235,6 +230,41 @@ img{
   list-style: none;
   padding: 8px;
   margin: auto;
+}
+
+.stats .card-title{
+  /* border: solid red; */
+  text-align: center;
+  font-size: 28px;
+}
+
+.stats{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stats img{
+  height: 300px;
+  width: auto;
+  position: relative;
+  left: -0px;
+  top: 0px;
+  /* border: solid red; */
+}
+
+.stats{  
+  max-width: 700px;
+  height: 600px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 10px;
+  padding-bottom: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  margin: auto;  
+  box-shadow: 7px 8px 0px 0px rgba(8, 1, 1, 0.301); 
 }
 
 @media only screen and (min-width: 280px) and (max-width: 700px) {
@@ -299,8 +329,8 @@ input{
   padding-left: 10px;
 }
 
-.container .card{
-  max-width: 400px;
+#main .card{
+  max-width: 300px;
   height: auto;
 }
 
@@ -344,7 +374,7 @@ input{
 
   .info-box{
     position: relative;
-    top: -0px;
+    top: 4px;
     left: 0px;
     display: block;
     margin-left: auto;

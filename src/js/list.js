@@ -1,30 +1,12 @@
 import axios from "axios"
+import { typeColors } from "./info"
+import { statsInfo } from "./info"
 let url = 'https://pokeapi.co/api/v2/pokemon/'
 
 const maincontainer = document.querySelector('#main');
 const input = document.getElementById("input");
 const submit = document.getElementById("submit");
-
-const typeColors = {
-  normal: "#e0e0e0",
-  fighting: "#F0E8D1",
-  flying: "#A7B5D1",
-  poison: "#A977AA",
-  ground: "#C3A17A",
-  rock: "#C7B470",
-  bug: "#FCE09A",
-  ghost: "#BDAAE5",
-  steel: "#E3E6F1",
-  fire: "#ff8a8a",
-  water: "#ADCEFF",
-  grass: "#AAE396",
-  electric: "#FAF57A",
-  psychic: "#ff9cd1",
-  ice: "#C7F8FF",
-  dragon: "#B1ABFA",
-  dark: "#9C9FBE",
-  fairy: "#F7CBE5"
-}
+const body = document.body;
 
 async function createCard(id) {
   await axios.get(url + id)
@@ -64,18 +46,20 @@ async function createCard(id) {
       card.appendChild(card_content);
       maincontainer.appendChild(card);
 
-      // card.addEventListener("click", (event) => {
-      //   event.preventDefault();
-      //   clearInfo();
-      // })
+      card.addEventListener("click", (event) => {
+        event.preventDefault();
+        //body.style.backgroundColor = color;
+        clearInfo();
+        statsInfo(data.id, maincontainer);
+      });
     })
     .catch((err) => {
       console.log(err);
-    })
+    });
 }
 
 async function createList() {
-  for (let i = 1; i <= 150; i++) {
+  for (let i = 1; i <= 898; i++) {
     await createCard(i);
   }
 }
@@ -103,7 +87,8 @@ document.addEventListener("keypress", (event) => {
   if (event.key === 'Enter') {
     searchEvent(event);
   }
-})
+});
+
 
 
 

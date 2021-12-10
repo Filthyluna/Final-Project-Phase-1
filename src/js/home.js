@@ -1,52 +1,13 @@
 import axios from "axios"
+import { statsInfo } from "./info"
+import { typeColors } from "./info"
+import { infoColors } from "./info"
 let url = 'https://pokeapi.co/api/v2/pokemon/'
 
 const random = document.querySelector('#randomPokemon');
 const randButton = document.getElementById("random");
 const input = document.getElementById("input");
 const submit = document.getElementById("submit");
-
-const typeColors = {
-  normal: "#e0e0e0",
-  fighting: "#F0E8D1",
-  flying: "#A7B5D1",
-  poison: "#A977AA",
-  ground: "#C3A17A",
-  rock: "#C7B470",
-  bug: "#FCE09A",
-  ghost: "#BDAAE5",
-  steel: "#E3E6F1",
-  fire: "#f5745b",
-  water: "#ADCEFF",
-  grass: "#AAE396",
-  electric: "#ffdf40",
-  psychic: "#ff9cd1",
-  ice: "#C7F8FF",
-  dragon: "#B1ABFA",
-  dark: "#9C9FBE",
-  fairy: "#F7CBE5"
-}
-
-const infoColors = {
-  normal: "#f0eded",
-  fighting: "#fff9e8",
-  flying: "#fcf5de",
-  poison: "#d292d4",
-  ground: "#f0ca9e",
-  rock: "#f0da8b",
-  bug: "#ffedbf",
-  ghost: "#d2bdff",
-  steel: "#f0f3fc",
-  fire: "#ff9f5e",
-  water: "#cfe2ff",
-  grass: "#DAF2D1",
-  electric: "#fffcab",
-  psychic: "#ffd1ea",
-  ice: "#dbfbff",
-  dragon: "#d2cfff",
-  dark: "#c2c6ed",
-  fairy: "#fcebf5"
-}
 
 async function createCard(id) {
   await axios.get(url + id)
@@ -55,7 +16,6 @@ async function createCard(id) {
       //Create card
       const card = document.createElement('div');
       card.className = 'card';
-      const infoCard = document.createElement('div');
 
       const card_content = document.createElement('div');
       card_content.className = 'card_body';
@@ -71,7 +31,6 @@ async function createCard(id) {
       //Get pokemon image
       const img = document.createElement('img');
       img.src = data.sprites.front_default;
-      console.log(data.sprites.front);
       img.className = 'card-image-front';
       card_content.appendChild(img);
 
@@ -113,6 +72,12 @@ async function createCard(id) {
       card_content.appendChild(info);
       card.appendChild(card_content);
       random.appendChild(card);
+
+      card.addEventListener("click", (event) => {
+        event.preventDefault();
+        clearInfo();
+        statsInfo(data.id, random);
+      });
     })
     .catch((err) => {
       console.log(err);
