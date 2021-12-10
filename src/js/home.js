@@ -94,13 +94,13 @@ async function createCard(id) {
 
       const weight = document.createElement('li');
       weight.className = 'card_text';
-      let weightTxt = Math.round((data.weight/4.536)*10)/10;
+      let weightTxt = Math.round((data.weight / 4.536) * 10) / 10;
       weight.textContent = `Weight: ${weightTxt} lb`;
       info.appendChild(weight);
 
       const height = document.createElement('li');
       height.className = 'card_text';
-      let heightTxt = Math.round((data.height/3.048)*10)/10;
+      let heightTxt = Math.round((data.height / 3.048) * 10) / 10;
       height.textContent = `Height: ${heightTxt} ft`;
       info.appendChild(height);
 
@@ -138,9 +138,19 @@ const clearInfo = () => {
   }
 };
 
-submit.addEventListener("click", (event) => {
-  event.preventDefault();
-  clearInfo();
-  let value = input.value.toLowerCase();
-  createCard(value);
+function searchEvent(event) {
+    event.preventDefault();
+    clearInfo();
+    let value = input.value.toLowerCase();
+    createCard(value);
+}
+
+document.addEventListener("keypress", (event) => {
+  if (event.key === 'Enter') {
+    searchEvent(event);
+  }
 });
+
+submit.addEventListener("click", (event) => {
+  searchEvent(event);
+})
