@@ -74,8 +74,8 @@ async function createCard(id) {
     })
 }
 
-async function createList(){
-  for (let i = 1; i <= 898; i++){
+async function createList() {
+  for (let i = 1; i <= 150; i++) {
     await createCard(i);
   }
 }
@@ -95,15 +95,15 @@ function searchEvent(event) {
   createCard(value);
 }
 
+submit.addEventListener("click", (event) => {
+  searchEvent(event);
+});
+
 document.addEventListener("keypress", (event) => {
   if (event.key === 'Enter') {
     searchEvent(event);
   }
-});
-
-submit.addEventListener("click", (event) => {
-  searchEvent(event)
-});
+})
 
 
 
