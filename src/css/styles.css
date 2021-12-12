@@ -378,8 +378,8 @@ input{
     height: 520px;
     margin: 20px;  
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   #randomPokemon img{
@@ -403,7 +403,7 @@ input{
   .stats{  
     max-width: 60vh;
     height: 140vh;
-    margin: 20px; 
+    margin: 20px;
     display: block;
     margin-left: 10px;
     margin-right: 10px;
