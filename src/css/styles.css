@@ -402,11 +402,11 @@ input{
 
   .stats{  
     max-width: 60vh;
-    height: 130vh;
+    height: 140vh;
     margin: 20px; 
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .stats .card-title{
@@ -420,15 +420,16 @@ input{
   .stats .card_body img{
     height: 250px;
     width: auto;
-    margin-top: -80px;
+    margin-top: -90px;
+  }
+
+  .container .stats .card_body img{
+    width: 260px;
+    height: auto;
   }
 
   .stats .card_body .front-shiny{
-    margin-top: 20px;
-  }
-
-  .stats .card_body .front-shiny{
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
   .stat-box{
