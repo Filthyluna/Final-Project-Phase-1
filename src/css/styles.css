@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -165,7 +168,7 @@ img{
 }
 
 #random{
-  margin-left:45%;
+  margin-left: 42%;
   padding:16px 25px;
   border-radius: 20em;
   border: none;
@@ -186,8 +189,7 @@ img{
   position: relative;
   left: -0px;
   top: 0px;
-  /* border: solid red; */
-  
+  /* border: solid red; */ 
 }
 
 #randomPokemon .card-title{
@@ -232,10 +234,20 @@ img{
   margin: auto;
 }
 
+.stats .card_text{
+  font-size: 40px;
+  list-style: none;
+  padding: 3px;
+  margin: auto;
+  font-family: 'VT323', monospace;
+}
+
 .stats .card-title{
   /* border: solid red; */
   text-align: center;
   font-size: 28px;
+  position: relative;
+  top: -100px;
 }
 
 .stats{
@@ -244,27 +256,39 @@ img{
   align-items: center;
 }
 
-.stats img{
-  height: 300px;
-  width: auto;
+.stats .card_body img{
+  width: 300px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: -40px;
   position: relative;
-  left: -0px;
-  top: 0px;
-  /* border: solid red; */
 }
 
 .stats{  
-  max-width: 700px;
-  height: 600px;
+  max-width: 800px;
+  height: 980px;
   border-style: solid;
   border-width: 3px;
   border-radius: 10px;
-  padding-bottom: 50px;
   padding-right: 10px;
   padding-left: 10px;
-  padding-top: 10px;
   margin: auto;  
   box-shadow: 7px 8px 0px 0px rgba(8, 1, 1, 0.301); 
+}
+
+.stat-box{
+  max-width: 600px;
+  height: 460px;
+  background-color: cadetblue;
+  border: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-bottom: -100px;
+  padding: 20px 40px;
+  box-shadow: 3px 5px 0px 0px rgba(3, 31, 151, 0.493); 
+  position: relative;
+  left: 60px;
 }
 
 @media only screen and (min-width: 280px) and (max-width: 700px) {
@@ -276,7 +300,7 @@ img{
       height: 100%;
   }
   #logo{
-      float:right;
+    font-size:3em;
   }
 
   #hamburger{
@@ -342,7 +366,7 @@ input{
   #random{
     margin-left:35%;
     margin-right:0%;
-    padding:16px 25px;
+    padding: 16px 25px;
     border-radius: 20em;
     border: none;
     background-color:#D3B8F5;
@@ -352,15 +376,10 @@ input{
   #randomPokemon .card{ 
     max-width: 60vh;
     height: 520px;
-    border-style: solid;
-    border-width: 3px;
-    border-radius: 10px;
-    padding-bottom: 50px;
-    padding-right: 10px;
-    
-    padding-top: 10px;
     margin: 20px;  
-    box-shadow: 7px 8px 0px 0px rgba(8, 1, 1, 0.358); 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #randomPokemon img{
@@ -379,6 +398,53 @@ input{
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .stats{  
+    max-width: 60vh;
+    height: 130vh;
+    margin: 20px; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .stats .card-title{
+    /* border: solid red; */
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 0px;
+    margin-top: 110px;
+  }
+
+  .stats .card_body img{
+    height: 250px;
+    width: auto;
+    margin-top: -80px;
+  }
+
+  .stats .card_body .front-shiny{
+    margin-top: 20px;
+  }
+
+  .stats .card_body .front-shiny{
+    margin-top: 20px;
+  }
+
+  .stat-box{
+    height: 340px;
+    width: 330px;
+    padding: 10px 10px;
+    position: relative;
+    top: -40px;
+    left: 0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .stats .card_text{
+    font-size: 28px;
   }
 }
 

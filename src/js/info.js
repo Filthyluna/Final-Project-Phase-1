@@ -1,6 +1,5 @@
 import axios from "axios";
 let url = 'https://pokeapi.co/api/v2/pokemon/'
-const stats_cont = document.getElementById("stats");
 
 
 const typeColors = {
@@ -104,6 +103,21 @@ async function statsInfo(id, container) {
       let heightTxt = Math.round((data.height / 3.048) * 10) / 10;
       height.textContent = `Height: ${heightTxt} ft`;
       stat_dets.appendChild(height);
+
+      //Div color
+      const subColor = Object.keys(infoColors);
+      const mainColor = subColor.find(type => pokeType.indexOf(type) == 0);
+      const color2 = infoColors[mainColor];
+      stat_dets.style.backgroundColor = color2;
+      
+      //Base Stat information
+      data.stats.forEach(stat => {
+        const statElement = document.createElement('li');
+        statElement.className = 'card_text';
+        let name = stat.stat.name[0].toUpperCase() + stat.stat.name.slice(1);
+        statElement.textContent = `${name}: ${stat.base_stat}`;
+        stat_dets.appendChild(statElement);
+      });
 
       stats_body.appendChild(stat_dets);
       stats.appendChild(stats_body);

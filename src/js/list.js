@@ -3,10 +3,10 @@ import { typeColors } from "./info"
 import { statsInfo } from "./info"
 let url = 'https://pokeapi.co/api/v2/pokemon/'
 
-const maincontainer = document.querySelector('#main');
+const maincontainer = document.getElementById('main');
 const input = document.getElementById("input");
 const submit = document.getElementById("submit");
-const body = document.body;
+const pokeStat = document.getElementById("stat-list");
 
 async function createCard(id) {
   await axios.get(url + id)
@@ -46,12 +46,7 @@ async function createCard(id) {
       card.appendChild(card_content);
       maincontainer.appendChild(card);
 
-      card.addEventListener("click", (event) => {
-        event.preventDefault();
-        //body.style.backgroundColor = color;
-        clearInfo();
-        statsInfo(data.id, maincontainer);
-      });
+      statsCard(card, id);
     })
     .catch((err) => {
       console.log(err);
@@ -66,15 +61,19 @@ async function createList() {
 
 createList();
 
-const clearInfo = () => {
+const clearInfo1 = () => {
   while (maincontainer.firstChild) {
     maincontainer.firstChild.remove();
   }
 };
 
+const clearInfo = () => {
+  maincontainer.style.display = "none";
+}
+
 function searchEvent(event) {
   event.preventDefault();
-  clearInfo();
+  clearInfo1();
   let value = input.value.toLowerCase();
   createCard(value);
 }
@@ -89,8 +88,10 @@ document.addEventListener("keypress", (event) => {
   }
 });
 
-
-
-
-
-
+function statsCard(div, id) {
+  div.addEventListener("click", (event) => {
+    event.preventDefault();
+    clearInfo();
+    statsInfo(id, pokeStat);
+  });
+}
