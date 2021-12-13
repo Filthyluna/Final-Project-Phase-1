@@ -3,7 +3,7 @@ import { typeColors } from "./info"
 import { statsInfo } from "./info"
 let url = 'https://pokeapi.co/api/v2/pokemon/'
 
-const maincontainer = document.getElementById('main');
+const pokeList = document.getElementById('list');
 const input = document.getElementById("input");
 const submit = document.getElementById("submit");
 const pokeStat = document.getElementById("stat-list");
@@ -44,7 +44,7 @@ async function createCard(id) {
       card.style.backgroundColor = color;
 
       card.appendChild(card_content);
-      maincontainer.appendChild(card);
+      pokeList.appendChild(card);
 
       statsCard(card, id);
     })
@@ -61,19 +61,15 @@ async function createList() {
 
 createList();
 
-const clearInfo1 = () => {
-  while (maincontainer.firstChild) {
-    maincontainer.firstChild.remove();
+const clearInfo = () => {
+  while (pokeList.firstChild) {
+    pokeList.firstChild.remove();
   }
 };
 
-const clearInfo = () => {
-  maincontainer.style.display = "none";
-}
-
 function searchEvent(event) {
   event.preventDefault();
-  clearInfo1();
+  clearInfo();
   let value = input.value.toLowerCase();
   createCard(value);
 }
@@ -92,6 +88,6 @@ function statsCard(div, id) {
   div.addEventListener("click", (event) => {
     event.preventDefault();
     clearInfo();
-    statsInfo(id, pokeStat);
+    statsInfo(id, pokeList);
   });
 }

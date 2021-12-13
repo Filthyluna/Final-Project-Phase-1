@@ -118,14 +118,14 @@ input{
 }
 
 /*card layout*/
-.container{
+.pokeList{
   display: flex;
   flex-wrap: wrap;
   align-items: space-between;
   justify-content: center;
 }
 
-#main{
+#list{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,7 +136,7 @@ input{
 
 
 /* If no color then this is the stand in*/
-#main .card{
+#list .card{
   max-width: 210px;
   background-color: cadetblue;
   border-style: solid;
@@ -240,6 +240,7 @@ img{
   padding: 3px;
   margin: auto;
   font-family: 'VT323', monospace;
+  text-align: left;
 }
 
 .stats .card-title{
@@ -353,7 +354,7 @@ input{
   padding-left: 10px;
 }
 
-#main .card{
+#list .card{
   max-width: 300px;
   height: auto;
 }
@@ -423,11 +424,6 @@ input{
     margin-top: -90px;
   }
 
-  .container .stats .card_body img{
-    width: 260px;
-    height: auto;
-  }
-
   .stats .card_body .front-shiny{
     margin-top: 10px;
   }
@@ -446,6 +442,7 @@ input{
 
   .stats .card_text{
     font-size: 28px;
+    text-align: left;
   }
 }
 
