@@ -315,6 +315,10 @@ img{
   left: 60px;
 }
 
+.dropbtn{
+  display:none;
+}
+
 @media only screen and (min-width: 280px) and (max-width: 700px) {
   .navbar{
       display:inline-block;
@@ -467,6 +471,54 @@ input{
     font-size: 28px;
     text-align: left;
   }
+  .dropbtn{
+    display:block;
+    background-color:#D3B8F5;
+    color: white;
+    padding:16px;
+    font-size:16px;
+    border:none;
+    cursor:pointer;
+  }
+  .dropdown{
+    position:relative;
+    display: inline-block;
+  }
+  .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px #d3b8f562;
+    z-index: 1;
+  }
+
+  .dropdown-content .gens{
+    color:black;
+    display: block;
+    border-radius: 0px;
+    border-bottom: 1px solid #333;
+    margin:0;
+    padding-left: 50%;
+    padding-right: 50%;
+  }
+  
+  .gens:hover{
+    background-color:#6B03BD;
+  }
+
+  .dropdown-content .gens:hover{
+    background-color:#6B03BD;
+  }
+
+  .dropdown:hover .dropdown-content{
+    display:block;
+  }
+
+  .dropdown:hover .dropbtn{
+    background-color:#7b06d5;
+  }
+
 }
 
 
