@@ -389,16 +389,6 @@ input{
   height: auto;
 }
 
-  #random{
-    margin-left:35%;
-    margin-right:0%;
-    padding: 16px 25px;
-    border-radius: 20em;
-    border: none;
-    background-color:#D3B8F5;
-    margin-bottom:10px
-  }
-
   #randomPokemon .card{ 
     max-width: 60vh;
     height: 520px;
@@ -408,13 +398,11 @@ input{
     margin-right: 10px;
   }
 
-  #randomPokemon img{
+  #randomPokemon .card-image-front{
     height: 250px;
     width: auto;
-    /* border: solid red; */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
+    left: 0px;
   }
 
   .info-box{
