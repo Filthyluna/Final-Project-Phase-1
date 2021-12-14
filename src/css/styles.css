@@ -21,6 +21,7 @@ img{
 }
 
 #logo{
+    font-family: 'Play', sans-serif;
     font-size:4em;
     /*border: 1px solid green;*/
     color:white;
@@ -32,6 +33,11 @@ img{
     display:flex;
     border-bottom: 1px solid #e2e8f0;
     background-image: linear-gradient(to right,#6B03BD 20%,#9859E9);
+}
+
+.header button{
+  font-size: 18px;
+  font-family: 'Play', sans-serif;
 }
 
 .navbar{
@@ -124,8 +130,8 @@ input{
 .list-container{
   text-align: center;
 }
+
 .gens{
-  text-align: center;
   padding:16px 25px;
   border-radius: 20em;
   border: none;
@@ -173,7 +179,6 @@ input{
   cursor: pointer;
   font-size: 11px;
   font-family: 'Play', sans-serif;
-  /* border: solid red; */
 }
 
 .card img{
@@ -267,6 +272,7 @@ input{
   /* border: solid red; */
   text-align: center;
   font-size: 28px;
+  font-family: 'Play', sans-serif;
   position: relative;
   top: -100px;
 }
