@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
 
 
 *{
@@ -118,6 +118,24 @@ input{
   padding-left: 10px;
 }
 
+.gens{
+  display: inline-block;
+  position: relative;
+  left: 20%;
+  padding:16px 25px;
+  border-radius: 20em;
+  border: none;
+  background-color:#D3B8F5;
+  margin-bottom:10px
+}
+
+.gens:hover:focus{
+  box-shadow: 5px rgba(0, 0, 0, 0.379);
+  border:.5px solid black;
+  background-color:#865db9;
+  color: white;
+}
+
 /*card layout*/
 .pokeList{
   display: flex;
@@ -126,7 +144,7 @@ input{
   justify-content: center;
 }
 
-#list{
+.pokeList{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,7 +155,7 @@ input{
 
 
 /* If no color then this is the stand in*/
-#list .card{
+.pokeList .card{
   max-width: 210px;
   background-color: cadetblue;
   border-style: solid;
@@ -149,6 +167,8 @@ input{
   box-shadow: 7px 8px 0px 0px rgba(8, 1, 1, 0.393); 
   text-align: center;
   cursor: pointer;
+  font-size: 11px;
+  font-family: 'Play', sans-serif;
   /* border: solid red; */
 }
 
@@ -197,6 +217,7 @@ img{
   /* border: solid red; */
   text-align: center;
   font-size: 28px;
+  font-family: 'Play', sans-serif;
 }
 
 #randomPokemon .card{  
@@ -229,10 +250,11 @@ img{
 }
 
 .card_text{
-  font-size: 24px;
+  font-size: 26px;
   list-style: none;
   padding: 8px;
   margin: auto;
+  font-family: 'VT323', monospace;
 }
 
 .stats .card_text{
@@ -355,7 +377,7 @@ input{
   padding-left: 10px;
 }
 
-#list .card{
+.pokeList .card{
   max-width: 300px;
   height: auto;
 }
