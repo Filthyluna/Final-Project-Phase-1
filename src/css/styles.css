@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
 
+
 *{
   margin: 0;
   padding: 0;
@@ -403,7 +404,7 @@ input{
 
   .stats{  
     max-width: 60vh;
-    height: 140vh;
+    height: 95rem;
     margin: 20px;
     display: block;
     margin-left: 10px;
