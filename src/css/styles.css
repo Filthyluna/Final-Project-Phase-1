@@ -372,7 +372,7 @@ nav button{
 input{ 
   border-width: 3px;
   height:5rem;
-  width:inherit;
+  width:200px;
   /*border-radius:10px;*/
   font-size:20px;
   border-radius: 10px;
@@ -415,7 +415,7 @@ input{
   }
 
   .stats{  
-    max-width: 60vh;
+    max-width: 50vh;
     height: 94rem;
     margin: 20px;
     display: block;
