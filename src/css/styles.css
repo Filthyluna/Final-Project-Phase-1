@@ -443,7 +443,7 @@ input{
 
   .stat-box{
     height: 340px;
-    width: 330px;
+    width: 50vh;
     padding: 10px 10px;
     position: relative;
     top: -40px;
